@@ -1,0 +1,106 @@
+.skills-container {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0d1117, #1a1f25);
+    color: #e6edf3;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(45deg, #007acc, #00d4ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #007acc;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.skill-card {
+    background: rgba(31, 41, 55, 0.7);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 200px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 0px 20px rgba(0, 122, 204, 0.9);
+    border: 2px solid rgba(0, 122, 204, 0.8);
+}
+
+.skill-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #007acc, #00d4ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skill-icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 122, 204, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 122, 204, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-card:hover .skill-icon-container {
+    box-shadow: 0px 0px 20px rgba(0, 122, 204, 1);
+}
+
+.skill-level {
+    font-size: 1rem;
+    color: #b0b3b8;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

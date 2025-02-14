@@ -1,6 +1,9 @@
 import "../styles/header.css";
 
 function Header() {
+    const scrollToSection = (id) => {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    };
 
   return (
     <header>
@@ -8,10 +11,10 @@ function Header() {
         <a href="/">MARK-T</a>
       </span>
       <ul>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>Contact</li>
+        <li onClick={() => scrollToSection("home")}>Home</li>
+        <li onClick={() => scrollToSection("projects")}>Projects</li>
+        <li onClick={() => scrollToSection("skills")}>Skills</li>
+        <li onClick={() => scrollToSection("contact")}>Contact</li>
       </ul>
     </header>
   );

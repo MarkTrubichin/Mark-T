@@ -7,14 +7,14 @@ function HeroSection() {
   };
 
   return (
-    <div className="container">
+    <div className="container" id="home">
       <h1>Hello! I'm a Full-Stack Developer</h1>
       <p>
         I create reliable and efficient software solutions for any task. I am a
         full-stack developer with experience in Python, Go, JavaScript, and
         modern web technologies. I develop web applications, bots, APIs,
         databases, and more. I have expertise in asynchronous technologies,
-        process automation, and CI/CD. I am also learning Solidity and Web3 for
+        process automation, and CI/CD. I am also know Solidity and Web3 for
         blockchain development.
       </p>
       <div className="buttons">

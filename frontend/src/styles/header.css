@@ -20,6 +20,7 @@ header ul{
 header ul li {
     margin: 0 40px;
     font-size: 20px;
+    cursor: pointer;
 }
 header span{
     margin-left: 40px;
