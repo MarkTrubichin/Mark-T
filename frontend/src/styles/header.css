@@ -1,0 +1,31 @@
+header {
+    background-color: #0d1117;
+    color: #e6edf3;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    scroll-behavior: smooth;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 0;
+}
+header ul li {
+    margin: 0 40px;
+    font-size: 20px;
+}
+header span{
+    margin-left: 40px;
+}
+header span a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #e6edf3;
+    cursor: default;
+}
