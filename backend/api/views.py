@@ -4,6 +4,8 @@ from rest_framework import status, generics
 from .models import Skills, Project
 from .serializers import SkillSerializer, ProjectSerializer
 from rest_framework.generics import RetrieveAPIView
+from django.http import FileResponse
+import os
 
 
 
@@ -29,3 +31,4 @@ class ProjectListAPIView(generics.ListAPIView):
 class ProjectDetailView(RetrieveAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+

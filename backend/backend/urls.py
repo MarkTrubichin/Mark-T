@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 import os
 from django.http import HttpResponse
+from django.conf import settings
+from django.conf.urls.static import static
+from django.views.generic.base import RedirectView
 
 def index(request):
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -34,4 +37,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name="home"),
     path("api/", include("api.urls")),
+    path("favicon.svg", RedirectView.as_view(url=settings.STATIC_URL + "favicon.svg", permanent=True)),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
