@@ -9,7 +9,7 @@ function HeroSection() {
   return (
     <div className="container" id="home">
       <h1>Hello! I'm a Full-Stack Developer</h1>
-      <p>
+      <p className="text">
         I create reliable and efficient software solutions for any task. I am a
         full-stack developer with experience in Python, Go, JavaScript, and
         modern web technologies. I develop web applications, bots, APIs,

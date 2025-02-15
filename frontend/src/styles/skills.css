@@ -5,7 +5,7 @@
     color: #e6edf3;
 }
 
-h2 {
+.header {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -18,7 +18,7 @@ h2 {
     -webkit-text-fill-color: transparent;
 }
 
-h2::after {
+.header::after {
     content: "";
     display: block;
     width: 60px;
@@ -102,5 +102,22 @@ h2::after {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 300px) {
+    .header {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 270px) {
+    .header {
+        font-size: 1.5rem;
+    }
+    .skill-card{
+        width: 130px;
+    }
+    .skill-icon{
+        font-size: 3.5rem;
     }
 }

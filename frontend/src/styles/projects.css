@@ -56,3 +56,13 @@ button {
 button:hover {
     background: #00d4ff;
 }
+@media (max-width: 350px) {
+    .header {
+        font-size: 30px;
+    }
+}
+@media (max-width: 270px) {
+    .header {
+        font-size: 22px;
+    }
+}

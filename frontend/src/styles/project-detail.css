@@ -76,3 +76,33 @@ p {
         transform: translateY(0);
     }
 }
+@media (max-width: 1000px) {
+    .project-details {
+        max-width: 600px;
+    }
+}
+@media (max-width: 750px) {
+    .project-details {
+        max-width: 450px;
+    }
+}
+@media (max-width: 550px) {
+    .project-details {
+        max-width: 250px;
+    }
+    .back-btn {
+        font-size: 0.7rem;
+        top: 10px;
+    }
+    p {
+        line-height: 1.3;
+    }
+}
+@media (max-width: 350px) {
+    .project-details {
+        max-width: 150px;
+    }
+    .project-link {
+        font-size: 0.7rem;
+    }
+}
