@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import SkillListView, ProjectListAPIView, ProjectDetailView
-from .views import favicon_view
 
 
 urlpatterns = [
