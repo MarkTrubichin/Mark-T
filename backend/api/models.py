@@ -8,3 +8,15 @@ class Skills(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Project(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    technologies = models.CharField(max_length=500)
+    githublink = models.URLField(blank=True, null=True)
+    type = models.CharField(max_length=100, default="Other")
+
+    def __str__(self):
+        return self.title

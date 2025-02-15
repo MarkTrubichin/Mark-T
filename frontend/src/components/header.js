@@ -1,23 +1,38 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/header.css";
 
 function Header() {
-    const scrollToSection = (id) => {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    const navigate = useNavigate();
+
+    const handleNavigation = (id) => {
+        if (window.location.pathname !== "/") {
+            navigate("/");
+            setTimeout(() => scrollToSection(id), 300);
+        } else {
+            scrollToSection(id);
+        }
     };
 
-  return (
-    <header>
-      <span>
-        <a href="/">MARK-T</a>
-      </span>
-      <ul>
-        <li onClick={() => scrollToSection("home")}>Home</li>
-        <li onClick={() => scrollToSection("projects")}>Projects</li>
-        <li onClick={() => scrollToSection("skills")}>Skills</li>
-        <li onClick={() => scrollToSection("contact")}>Contact</li>
-      </ul>
-    </header>
-  );
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    return (
+        <header>
+            <span>
+                <a href="/">MARK-T</a>
+            </span>
+            <ul>
+                <li onClick={() => handleNavigation("home")}>Home</li>
+                <li onClick={() => handleNavigation("projects")}>Projects</li>
+                <li onClick={() => handleNavigation("skills")}>Skills</li>
+                <li onClick={() => handleNavigation("contact")}>Contact</li>
+            </ul>
+        </header>
+    );
 }
 
 export default Header;

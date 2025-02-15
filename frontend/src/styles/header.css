@@ -8,6 +8,7 @@ header {
     position: fixed;
     scroll-behavior: smooth;
     z-index: 100;
+    top: 0;
 }
 
 header ul{
@@ -22,6 +23,12 @@ header ul li {
     font-size: 20px;
     cursor: pointer;
 }
+
+header ul li:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease-in-out;
+}
+
 header span{
     margin-left: 40px;
 }
@@ -30,4 +37,51 @@ header span a{
     text-decoration: none;
     color: #e6edf3;
     cursor: default;
+}
+
+@media (max-width: 1200px) {
+    header ul li {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    header ul li {
+        font-size: 17px;
+    }
+    header span a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 500px) {
+    header ul li {
+        margin: 0 10px;
+        font-size: 13px;
+    }
+    header span {
+        margin-left: 20px;
+    }
+    header span a{
+        font-size: 15px;
+    }
+    header ul{
+        margin-right: 10px;
+    }
+}
+@media (max-width: 350px) {
+    header ul li {
+        margin: 0 10px;
+        font-size: 10px;
+    }
+    header span {
+        margin-left: 10px;
+    }
+    header span a {
+        font-size: 13px;
+    }
+}
+@media (max-width: 290px) {
+    header ul li {
+        margin: 0 5px;
+    }
 }
